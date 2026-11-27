@@ -1168,6 +1168,319 @@
     .pct-high { background: rgba(16, 185, 129, 0.16); color: #34d399; }
     .pct-mid { background: rgba(245, 158, 11, 0.16); color: #fbbf24; }
     .pct-low { background: rgba(244, 63, 94, 0.16); color: #fda4af; }
+
+    /* Strict Word Wrapping & Single-Line Values */
+    th, td, .kpi-label, .kpi-value, .kpi-sub, .card-title, .card-subtitle,
+    .tab-btn, .status-pill, .assign-badge, .pct-badge, .btn, label, .meta-pill {
+      overflow-wrap: normal;
+      word-break: normal;
+      hyphens: none;
+    }
+    .val-nowrap,
+    .kpi-value,
+    .num,
+    .pct-badge,
+    .status-pill,
+    .assign-badge,
+    .meta-pill {
+      white-space: nowrap !important;
+    }
+    #indt-detail-table thead th,
+    #withps-detail-table thead th {
+      font-size: 9px !important;
+      padding: 6px 2px !important;
+      line-height: 1.18 !important;
+      white-space: normal !important;
+    }
+    #indt-detail-table tbody td,
+    #indt-detail-table tfoot td,
+    #withps-detail-table tbody td,
+    #withps-detail-table tfoot td {
+      font-size: 10px !important;
+      padding: 6px 2px !important;
+      line-height: 1.25 !important;
+    }
+    #indt-detail-table tbody td.num,
+    #indt-detail-table tfoot td.num,
+    #withps-detail-table tbody td.num,
+    #withps-detail-table tfoot td.num {
+      font-size: 9.5px !important;
+    }
+    #indt-detail-table .status-pill,
+    #withps-detail-table .status-pill,
+    #indt-detail-table .assign-badge,
+    #withps-detail-table .assign-badge,
+    #indt-detail-table .pct-badge,
+    #withps-detail-table .pct-badge {
+      font-size: 9px !important;
+      padding: 2px 4px !important;
+    }
+
+
+    /* Executive White Theme (Preserving Executive Navy/Blue/Emerald/Amber Accents) */
+    :root {
+      --bg-primary: #f8fafc;
+      --bg-secondary: #ffffff;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f5f9;
+      --bg-input: #ffffff;
+      --border-subtle: #e2e8f0;
+      --border-strong: #cbd5e1;
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
+      --text-muted: #64748b;
+      --accent-blue: #0284c7;
+      --accent-indigo: #4f46e5;
+      --accent-emerald: #059669;
+      --accent-amber: #d97706;
+      --accent-rose: #e11d48;
+      --accent-purple: #7c3aed;
+      --shadow-lg: 0 4px 18px -4px rgba(15, 23, 42, 0.08), 0 1px 3px rgba(15, 23, 42, 0.05);
+    }
+
+    body {
+      background-color: #f8fafc !important;
+      color: #0f172a !important;
+    }
+
+    /* Executive Navy Topbar kept crisp with light surface contrast */
+    .topbar {
+      background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%) !important;
+      border-bottom: 1px solid #1e293b !important;
+    }
+    .topbar .brand-text h1 { color: #ffffff !important; }
+    .topbar .brand-meta { color: #cbd5e1 !important; }
+    .topbar .meta-pill {
+      background: rgba(56, 189, 248, 0.18) !important;
+      color: #7dd3fc !important;
+      border-color: rgba(56, 189, 248, 0.35) !important;
+    }
+    .topbar .role-guest {
+      background: rgba(255, 255, 255, 0.10) !important;
+      color: #e2e8f0 !important;
+      border-color: rgba(255, 255, 255, 0.22) !important;
+    }
+    .topbar .btn-locked {
+      background: rgba(15, 23, 42, 0.65) !important;
+      color: #cbd5e1 !important;
+      border-color: #475569 !important;
+    }
+    .topbar .btn-locked:hover {
+      border-color: #fbbf24 !important;
+      color: #fbbf24 !important;
+    }
+
+    /* Navigation Bar on White */
+    .nav-bar {
+      background: #ffffff !important;
+      border-bottom: 1px solid #e2e8f0 !important;
+    }
+    .tab-btn { color: #475569 !important; }
+    .tab-btn:hover { color: #0f172a !important; background: #f1f5f9 !important; }
+    .tab-btn.active {
+      color: #0284c7 !important;
+      border-bottom-color: #0284c7 !important;
+      background: rgba(2, 132, 199, 0.06) !important;
+    }
+    .tab-count {
+      background: #e2e8f0 !important;
+      color: #334155 !important;
+    }
+    .tab-btn.active .tab-count {
+      background: rgba(2, 132, 199, 0.15) !important;
+      color: #0284c7 !important;
+    }
+    .sheet-indicator { color: #475569 !important; }
+    .sheet-indicator code {
+      background: #f1f5f9 !important;
+      color: #0369a1 !important;
+      border: 1px solid #cbd5e1;
+    }
+
+    /* GDrive Beta Bar on Light Executive Surface */
+    .gdrive-beta-bar {
+      background: #f0f9ff !important;
+      border-bottom: 1px solid #bae6fd !important;
+      color: #334155 !important;
+    }
+    .beta-tag {
+      background: #fef3c7 !important;
+      color: #b45309 !important;
+      border-color: #fcd34d !important;
+    }
+    .gdrive-url-preview {
+      color: #0369a1 !important;
+      background: #ffffff !important;
+      border-color: #bae6fd !important;
+    }
+
+    /* Active Filter Strip */
+    .active-filter-strip {
+      background: #e0f2fe !important;
+      border-color: #7dd3fc !important;
+      color: #0c4a6e !important;
+    }
+    .filter-pill-badge {
+      background: #0284c7 !important;
+      border-color: #0369a1 !important;
+      color: #ffffff !important;
+    }
+
+    /* KPI Cards */
+    .kpi-card {
+      background: #ffffff !important;
+      border: 1px solid #e2e8f0 !important;
+    }
+    .kpi-card.selected-kpi {
+      background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%) !important;
+    }
+    .kpi-label { color: #475569 !important; }
+    .kpi-value { color: #0f172a !important; }
+    .kpi-sub { color: #64748b !important; }
+
+    /* Cards */
+    .card {
+      background: #ffffff !important;
+      border: 1px solid #e2e8f0 !important;
+    }
+    .card-header { border-bottom-color: #e2e8f0 !important; }
+    .card-title { color: #0f172a !important; }
+    .card-title code {
+      background: #f1f5f9;
+      color: #0369a1;
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-family: var(--font-mono);
+      font-size: 13px;
+    }
+    .card-subtitle { color: #64748b !important; }
+    .interactive-hint {
+      color: #0369a1 !important;
+      background: #e0f2fe !important;
+      border-color: #bae6fd !important;
+    }
+
+    /* Tables */
+    .table-wrap { border-color: #cbd5e1 !important; }
+    thead th {
+      background: #0f172a !important;
+      color: #f8fafc !important;
+      border-bottom-color: #334155 !important;
+    }
+    .group-header-th {
+      background: #1e293b !important;
+      color: #7dd3fc !important;
+    }
+    .spare-header-th {
+      background: #064e3b !important;
+      color: #6ee7b7 !important;
+    }
+    .kpi4-header-th {
+      background: #3b0764 !important;
+      color: #e9d5ff !important;
+    }
+    tbody tr { border-bottom-color: #e2e8f0 !important; }
+    tbody tr:nth-child(even) { background: #f8fafc !important; }
+    tbody tr:hover { background: #f0f9ff !important; }
+    tbody tr.selected-row {
+      background: #e0f2fe !important;
+      box-shadow: inset 3px 0 0 #0284c7 !important;
+    }
+    tbody td { color: #1e293b !important; }
+    tfoot td {
+      background: #f1f5f9 !important;
+      color: #0f172a !important;
+      border-top: 2px solid #94a3b8 !important;
+    }
+
+    /* High-contrast executive status & numeric colors on white */
+    .assign-badge {
+      background: #eef2ff !important;
+      color: #3730a3 !important;
+      border-color: #c7d2fe !important;
+    }
+    .st-wip { background: #d1fae5 !important; color: #065f46 !important; border-color: #6ee7b7 !important; }
+    .st-awp { background: #e0f2fe !important; color: #075985 !important; border-color: #7dd3fc !important; }
+    .st-jtp { background: #f3e8ff !important; color: #6b21a8 !important; border-color: #d8b4fe !important; }
+    .st-hold { background: #ffe4e6 !important; color: #9f1239 !important; border-color: #fda4af !important; }
+    .st-warn { background: #fef3c7 !important; color: #92400e !important; border-color: #fcd34d !important; }
+    .st-neutral { background: #f1f5f9 !important; color: #334155 !important; border-color: #cbd5e1 !important; }
+
+    .kpi4-ok { background: #d1fae5 !important; color: #065f46 !important; border-color: #6ee7b7 !important; }
+    .kpi4-yellow { background: #fef9c3 !important; color: #854d0e !important; border-color: #fde047 !important; }
+    .kpi4-red { background: #fee2e2 !important; color: #991b1b !important; border-color: #fca5a5 !important; }
+    .kpi4-amber-red {
+      background: linear-gradient(135deg, #ffedd5, #fee2e2) !important;
+      color: #9a3412 !important;
+      border-color: #fdba74 !important;
+    }
+    .kpi4-legend-bar {
+      background: #f8fafc !important;
+      border-color: #e2e8f0 !important;
+      color: #475569 !important;
+    }
+    .kpi4-legend-bar strong { color: #0f172a !important; }
+
+    .pct-high { background: #d1fae5 !important; color: #065f46 !important; }
+    .pct-mid { background: #fef3c7 !important; color: #92400e !important; }
+    .pct-low { background: #ffe4e6 !important; color: #9f1239 !important; }
+
+    .bal-pos { color: #059669 !important; }
+    .bal-neg { color: #dc2626 !important; }
+
+    /* Charts on White */
+    .vchart-yaxis { color: #64748b !important; }
+    .vchart-plot {
+      border-left-color: #cbd5e1 !important;
+      border-bottom-color: #cbd5e1 !important;
+    }
+    .vchart-gridline { border-top-color: #e2e8f0 !important; }
+    .vbar-total-label { color: #0f172a !important; }
+    .vbar-stack { box-shadow: 0 3px 10px rgba(15, 23, 42, 0.14) !important; }
+    .vchart-xlabel { color: #334155 !important; }
+    .vchart-xlabel.selected-xlabel { color: #0284c7 !important; }
+
+    .bar-track {
+      background: #e2e8f0 !important;
+      border-color: #cbd5e1 !important;
+    }
+    .chart-legend { color: #475569 !important; }
+
+    /* Remarks Drawer on White */
+    tr.remarks-drawer-row,
+    tr.remarks-drawer-row:hover {
+      background: #f8fafc !important;
+    }
+    .remarks-drawer-header { color: #b45309 !important; }
+    .remarks-drawer-text {
+      color: #1e293b !important;
+      background: #ffffff !important;
+      border-color: #cbd5e1 !important;
+    }
+
+    /* Inputs & Modals on White */
+    .input-control {
+      background: #ffffff !important;
+      border-color: #cbd5e1 !important;
+      color: #0f172a !important;
+    }
+    .modal {
+      background: #ffffff !important;
+      border-color: #cbd5e1 !important;
+    }
+    .modal h2 { color: #0f172a !important; }
+    .modal p, .modal-hint { color: #475569 !important; }
+    .form-group label { color: #1e293b !important; }
+    .info-banner {
+      background: #f0f9ff !important;
+      border-color: #bae6fd !important;
+      color: #0c4a6e !important;
+    }
+    .toast {
+      background: #0f172a !important;
+      color: #ffffff !important;
+    }
+
   </style>
 </head>
 <body>
@@ -1264,31 +1577,19 @@
       <div id="overview-filter-strip" class="active-filter-strip"></div>
       <div class="kpi-grid" id="overview-kpis"></div>
 
-      <div class="grid-2">
-        <div class="card">
-          <div class="card-header">
-            <div>
-              <div class="card-title">Component Distribution by Stage (A + B + C)</div>
-              <div class="card-subtitle">Click any component bar to isolate its data across KPIs, charts &amp; table</div>
-            </div>
-            <span class="interactive-hint">Click to Filter</span>
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Component Distribution by Stage (A + B + C)</div>
+            <div class="card-subtitle">Click any component bar to isolate its data across KPIs, charts &amp; table</div>
           </div>
-          <div id="overview-bar-chart"></div>
-          <div class="chart-legend">
-            <span class="legend-item clickable-legend" onclick="switchTab('nops')" title="Open 4. No PS"><span class="legend-swatch" style="background:#f59e0b"></span>No PS (A) ↗</span>
-            <span class="legend-item clickable-legend" onclick="switchTab('withps')" title="Open 3. With PS"><span class="legend-swatch" style="background:#38bdf8"></span>With PS (B) ↗</span>
-            <span class="legend-item clickable-legend" onclick="switchTab('indented')" title="Open 2. Indented"><span class="legend-swatch" style="background:#10b981"></span>Indented (C) ↗</span>
-          </div>
+          <span class="interactive-hint">Click to Filter</span>
         </div>
-
-        <div class="card">
-          <div class="card-header">
-            <div>
-              <div class="card-title" id="overview-stage-title">Pipeline Stage &amp; Sub-Status Summary</div>
-              <div class="card-subtitle" id="overview-stage-sub">Proportion of total tracked components</div>
-            </div>
-          </div>
-          <div id="overview-stage-chart"></div>
+        <div id="overview-bar-chart"></div>
+        <div class="chart-legend">
+          <span class="legend-item clickable-legend" onclick="switchTab('nops')" title="Open 4. No PS"><span class="legend-swatch" style="background:#f59e0b"></span>No PS (A) ↗</span>
+          <span class="legend-item clickable-legend" onclick="switchTab('withps')" title="Open 3. With PS"><span class="legend-swatch" style="background:#38bdf8"></span>With PS (B) ↗</span>
+          <span class="legend-item clickable-legend" onclick="switchTab('indented')" title="Open 2. Indented"><span class="legend-swatch" style="background:#10b981"></span>Indented (C) ↗</span>
         </div>
       </div>
 
@@ -4463,7 +4764,7 @@
     }
 
     // =========================================================================
-    // 4B. GOOGLE DRIVE DIRECT LINK PROTOTYPE (BETA)
+    // GOOGLE DRIVE DIRECT LINK
     // =========================================================================
     const DEFAULT_EXEC_URL = 'https://script.google.com/macros/s/AKfycbwQ0tqpbQFpSO11zu-8IKVkUYtiLGCkP2cWh6o0cJcJap_3CfUytXLOCFljPg1sewiaXQ/exec';
 
@@ -4894,36 +5195,7 @@
         </div>
       `;
 
-      // Pipeline Stage & Sub-Status Summary (Updates dynamically to selected component!)
-      document.getElementById('overview-stage-title').textContent = selectedOverviewComp
-        ? `Pipeline Stage Breakdown — ${selectedOverviewComp}`
-        : 'Pipeline Stage & Sub-Status Summary';
-      document.getElementById('overview-stage-sub').textContent = selectedOverviewComp
-        ? `Showing stage breakdown exclusively for ${selectedOverviewComp} (Total: ${totals.total})`
-        : 'Proportion of total tracked components';
-
-      const stageItems = [
-        { label: 'Indented (C) — AWP', val: totals.awp, color: '#10b981', tab: 'indented', tabLabel: '2. Indented' },
-        { label: 'Indented (C) — WIP', val: totals.wip, color: '#34d399', tab: 'indented', tabLabel: '2. Indented' },
-        { label: 'Indented (C) — KIV', val: totals.kiv, color: '#f43f5e', tab: 'indented', tabLabel: '2. Indented' },
-        { label: 'With PS (B) — TDI', val: totals.tdi, color: '#0ea5e9', tab: 'withps', tabLabel: '3. With PS' },
-        { label: 'With PS (B) — Quote', val: totals.quote, color: '#38bdf8', tab: 'withps', tabLabel: '3. With PS' },
-        { label: 'No PS (A)', val: totals.no_ps, color: '#f59e0b', tab: 'nops', tabLabel: '4. No PS' }
-      ];
-      document.getElementById('overview-stage-chart').innerHTML = stageItems.map(s => {
-        const p = totals.total > 0 ? (s.val / totals.total) * 100 : 0;
-        return `
-          <div class="bar-chart-row clickable-bar" style="margin-bottom:8px; padding:5px 8px;" onclick="switchTab('${s.tab}')" title="Click to open ${s.tabLabel}">
-            <div class="bar-chart-top">
-              <span>${s.label} <span style="font-size:10.5px; color:#64748b">↗</span></span>
-              <span><strong>${s.val}</strong> <span style="color:#94a3b8">(${p.toFixed(1)}%)</span></span>
-            </div>
-            <div class="bar-track" style="height:12px">
-              <div class="bar-seg" style="width:${p}%; background:${s.color}"></div>
-            </div>
-          </div>
-        `;
-      }).join('');
+      // Pipeline Stage chart removed per request
 
       // Table Header Actions
       document.getElementById('overview-table-actions').innerHTML = (selectedOverviewComp || selectedOverviewStage)
@@ -4946,12 +5218,12 @@
             <td class="center"><strong>${r.total}</strong></td>
             <td class="center td-nav-link ${hlNoPs}" onclick="event.stopPropagation(); switchTab('nops')" title="Open 4. No PS"><strong>${fmtZero(r.no_ps)}</strong></td>
             <td class="center td-nav-link ${hlWithPs}" onclick="event.stopPropagation(); switchTab('withps')" title="Open 3. With PS"><strong>${fmtZero(r.with_ps)}</strong></td>
-            <td class="center td-nav-link ${hlWithPs}" style="color:#93c5fd" onclick="event.stopPropagation(); switchTab('withps')" title="Open 3. With PS">${fmtZero(r.tdi)}</td>
-            <td class="center td-nav-link ${hlWithPs}" style="color:#93c5fd" onclick="event.stopPropagation(); switchTab('withps')" title="Open 3. With PS">${fmtZero(r.quote)}</td>
+            <td class="center td-nav-link ${hlWithPs}" style="color:#0284c7; font-weight:600" onclick="event.stopPropagation(); switchTab('withps')" title="Open 3. With PS">${fmtZero(r.tdi)}</td>
+            <td class="center td-nav-link ${hlWithPs}" style="color:#0284c7; font-weight:600" onclick="event.stopPropagation(); switchTab('withps')" title="Open 3. With PS">${fmtZero(r.quote)}</td>
             <td class="center td-nav-link ${hlIndt}" onclick="event.stopPropagation(); switchTab('indented')" title="Open 2. Indented"><strong>${fmtZero(r.indented)}</strong></td>
-            <td class="center td-nav-link ${hlIndt}" style="color:#6ee7b7" onclick="event.stopPropagation(); switchTab('indented')" title="Open 2. Indented">${fmtZero(r.awp)}</td>
-            <td class="center td-nav-link ${hlIndt}" style="color:#fda4af" onclick="event.stopPropagation(); switchTab('indented')" title="Open 2. Indented">${fmtZero(r.kiv)}</td>
-            <td class="center td-nav-link ${hlIndt}" style="color:#6ee7b7" onclick="event.stopPropagation(); switchTab('indented')" title="Open 2. Indented">${fmtZero(r.wip)}</td>
+            <td class="center td-nav-link ${hlIndt}" style="color:#059669; font-weight:600" onclick="event.stopPropagation(); switchTab('indented')" title="Open 2. Indented">${fmtZero(r.awp)}</td>
+            <td class="center td-nav-link ${hlIndt}" style="color:#dc2626; font-weight:600" onclick="event.stopPropagation(); switchTab('indented')" title="Open 2. Indented">${fmtZero(r.kiv)}</td>
+            <td class="center td-nav-link ${hlIndt}" style="color:#059669; font-weight:600" onclick="event.stopPropagation(); switchTab('indented')" title="Open 2. Indented">${fmtZero(r.wip)}</td>
             ${months.map(m => `<td class="center ${hlTarget}">${fmtZero(r.targets[m])}</td>`).join('')}
           </tr>
         `;
@@ -5091,7 +5363,7 @@
         </div>
         <div class="kpi-card" style="--kpi-accent:#f59e0b">
           <div class="kpi-label">Total LAD Value (RM)</div>
-          <div class="kpi-value" style="color:#fdba74">${formatNumOnly(kpiFin.totalLad)}</div>
+          <div class="kpi-value" style="color:#d97706; font-weight:600">${formatNumOnly(kpiFin.totalLad)}</div>
           <div class="kpi-sub">LAD KPI 3 + LAD KPI 4</div>
         </div>
         <div class="kpi-card" style="--kpi-accent:#0ea5e9">
@@ -5158,7 +5430,7 @@
           <div class="bar-chart-row clickable-bar ${isSel ? 'selected-bar' : ''}" style="${isDim ? 'opacity:0.45' : ''}" onclick="toggleIndtAssign('${escapeJs(g.assign)}')">
             <div class="bar-chart-top">
               <span><strong>${isSel ? '▶ ' : ''}${escapeHtml(g.assign)}</strong> (${g.qty} unit${g.qty > 1 ? 's' : ''})</span>
-              <span>${formatRM(g.indentVal)} <span style="color:#94a3b8">(${pct(g.indentVal, allIndentSum)})</span></span>
+              <span>${formatRM(g.indentVal)} <span style="color:#64748b">(${pct(g.indentVal, allIndentSum)})</span></span>
             </div>
             <div class="bar-track">
               <div class="bar-seg" style="width:${w}%; background:linear-gradient(90deg, #0284c7, #10b981)"></div>
@@ -5263,7 +5535,7 @@
       const formattedLines = dates.map(d => {
         const str = formatStandardEddDate(d);
         if (dates.length > 1 && d.getTime() === latest.getTime()) {
-          return `<strong style="color:#f8fafc; text-decoration:underline; text-underline-offset:2px" title="Latest EDD used for KPI 4">${str}</strong>`;
+          return `<strong style="color:#0f172a; text-decoration:underline; text-underline-offset:2px" title="Latest EDD used for KPI 4">${str}</strong>`;
         }
         return str;
       });
@@ -5353,7 +5625,7 @@
 
         const kpi3LadHtml = fin.kpi3IsNil
           ? '<span style="color:#64748b">-</span>'
-          : `<span style="color:#fdba74">${formatNumOnly(fin.lad3)}</span>`;
+          : `<span style="color:#d97706; font-weight:600">${formatNumOnly(fin.lad3)}</span>`;
 
         let daysLeftHtml = '<span style="color:#475569">-</span>';
         if (kpi4.daysLeft !== null) {
@@ -5363,11 +5635,11 @@
         }
 
         const lad4Html = fin.lad4 > 0
-          ? `<span style="color:#fdba74">${formatNumOnly(fin.lad4)}</span>`
+          ? `<span style="color:#d97706; font-weight:600">${formatNumOnly(fin.lad4)}</span>`
           : '<span style="color:#475569">-</span>';
 
         const totalLadHtml = fin.totalLad > 0
-          ? `<strong style="color:#fdba74">${formatNumOnly(fin.totalLad)}</strong>`
+          ? `<strong style="color:#d97706; font-weight:600">${formatNumOnly(fin.totalLad)}</strong>`
           : '<span style="color:#475569">-</span>';
 
         const progPayHtml = fin.progPay > 0
@@ -5391,8 +5663,7 @@
             <td class="center" style="line-height:1.35">${kpi4.formattedHtml}</td>
             <td class="center"><span class="status-pill ${statusClass(st)}">${escapeHtml(st)}</span></td>
             <td class="num">${sp.total}</td>
-            <td class="num" style="color:#6ee7b7">${sp.issued}</td>
-            <td class="num" style="color:#fda4af">${sp.outstanding}</td>
+            <td class="num" style="color:#dc2626; font-weight:600">${sp.outstanding}</td>
             <td class="center">${renderPctBadge(sp.total, sp.issued, sp.outstanding)}</td>
             <td class="num">${kpi3LadHtml}</td>
             <td class="center">${daysLeftHtml}</td>
@@ -5403,33 +5674,32 @@
             <td class="num">${balHtml}</td>
           </tr>
         `;
-        return isExpanded ? (mainRow + buildRemarksDrawerRow(r, 20, 'indented')) : mainRow;
+        return isExpanded ? (mainRow + buildRemarksDrawerRow(r, 19, 'indented')) : mainRow;
       }).join('');
 
       const subBalCls = sumBalInv < 0 ? 'bal-neg' : 'bal-pos';
 
       document.getElementById('indt-detail-table').innerHTML = `
         <colgroup>
-          <col style="width:2.3%">
-          <col style="width:5.0%">
+          <col style="width:2.4%">
+          <col style="width:5.2%">
+          <col style="width:4.6%">
           <col style="width:4.4%">
-          <col style="width:4.2%">
-          <col style="width:9.2%">
-          <col style="width:7.2%">
-          <col style="width:6.6%">
-          <col style="width:5.2%">
-          <col style="width:5.4%">
-          <col style="width:3.2%">
-          <col style="width:3.4%">
-          <col style="width:4.2%">
-          <col style="width:3.8%">
-          <col style="width:5.2%">
-          <col style="width:4.2%">
-          <col style="width:5.8%">
-          <col style="width:5.2%">
+          <col style="width:9.6%">
+          <col style="width:7.5%">
+          <col style="width:7.0%">
           <col style="width:5.4%">
           <col style="width:5.6%">
-          <col style="width:6.4%">
+          <col style="width:3.4%">
+          <col style="width:4.4%">
+          <col style="width:3.9%">
+          <col style="width:5.5%">
+          <col style="width:4.3%">
+          <col style="width:6.0%">
+          <col style="width:5.4%">
+          <col style="width:5.6%">
+          <col style="width:5.8%">
+          <col style="width:6.6%">
         </colgroup>
         <thead>
           <tr>
@@ -5442,7 +5712,7 @@
             <th rowspan="2" class="num">Indent<br>Value<br>(RM)</th>
             <th rowspan="2" class="center">EDD</th>
             <th rowspan="2" class="center">Progress<br>Status</th>
-            <th colspan="4" class="spare-header-th">Spare Status</th>
+            <th colspan="3" class="spare-header-th">Spare Status</th>
             <th rowspan="2" class="num">KPI 3<br>LAD<br>(RM)</th>
             <th colspan="4" class="kpi4-header-th">KPI 4 Monitoring</th>
             <th rowspan="2" class="num">Progress<br>Payment<br>(RM)</th>
@@ -5450,8 +5720,7 @@
           </tr>
           <tr>
             <th class="num">Total</th>
-            <th class="num">Issued</th>
-            <th class="num">Out-<br>standing</th>
+            <th class="num">O/S</th>
             <th class="center">%<br>Issued</th>
             <th class="center">Days<br>Left</th>
             <th class="center">Status</th>
@@ -5460,7 +5729,7 @@
           </tr>
         </thead>
         <tbody>
-          ${bodyHtml || `<tr><td colspan="20" class="center" style="padding:20px;color:#94a3b8">No matching records found.</td></tr>`}
+          ${bodyHtml || `<tr><td colspan="19" class="center" style="padding:20px;color:#94a3b8">No matching records found.</td></tr>`}
         </tbody>
         ${filtered.length ? `
         <tfoot>
@@ -5469,13 +5738,12 @@
             <td class="num">${formatNumOnly(sumIndentVal)}</td>
             <td colspan="2"></td>
             <td class="num">${sumTotal}</td>
-            <td class="num" style="color:#6ee7b7">${sumIssued}</td>
-            <td class="num" style="color:#fda4af">${sumOs}</td>
+            <td class="num" style="color:#dc2626; font-weight:600">${sumOs}</td>
             <td class="center">${renderPctBadge(sumTotal, sumIssued, sumOs)}</td>
-            <td class="num" style="color:#fdba74">${sumLad3 > 0 ? formatNumOnly(sumLad3) : '-'}</td>
+            <td class="num" style="color:#d97706; font-weight:600">${sumLad3 > 0 ? formatNumOnly(sumLad3) : '-'}</td>
             <td colspan="2"></td>
-            <td class="num" style="color:#fdba74">${sumLad4 > 0 ? formatNumOnly(sumLad4) : '-'}</td>
-            <td class="num" style="color:#fdba74">${sumTotalLad > 0 ? formatNumOnly(sumTotalLad) : '-'}</td>
+            <td class="num" style="color:#d97706; font-weight:600">${sumLad4 > 0 ? formatNumOnly(sumLad4) : '-'}</td>
+            <td class="num" style="color:#d97706; font-weight:600">${sumTotalLad > 0 ? formatNumOnly(sumTotalLad) : '-'}</td>
             <td class="num">${sumProgPay > 0 ? formatNumOnly(sumProgPay) : '-'}</td>
             <td class="num"><span class="${subBalCls}">${formatNumOnly(sumBalInv)}</span></td>
           </tr>
@@ -5609,7 +5877,7 @@
             <td class="center"><strong>${g.qty}</strong></td>
             <td class="num"><strong>${formatRM(g.quoteVal)}</strong></td>
             <td class="center"><span class="status-pill st-wip">${g.quoted}</span></td>
-            <td class="center" style="color:#94a3b8">${g.qty - g.quoted}</td>
+            <td class="center" style="color:#64748b">${g.qty - g.quoted}</td>
             ${summaryStatuses.map(st => `<td class="center">${fmtZero(g.statusCounts[st])}</td>`).join('')}
           </tr>
         `;
@@ -5860,41 +6128,39 @@
             <td class="center"><span class="assign-badge">${escapeHtml(r['ASSIGN'])}</span></td>
             <td>${descHtml}</td>
             <td style="line-height:1.35">${serialHtml}</td>
-            <td class="center" style="color:#cbd5e1">${kpi3.formattedDueDate}</td>
+            <td class="center" style="color:#334155">${kpi3.formattedDueDate}</td>
             <td class="center">${kpi3.formattedActualQuoteDate}</td>
             <td class="center">${qFlag ? '<span class="status-pill st-wip">1</span>' : '<span class="status-pill st-hold">0</span>'}</td>
             <td class="num"><strong>${qVal > 0 ? formatRM(qVal) : '-'}</strong></td>
             <td class="center"><span class="status-pill ${statusClass(st)}">${escapeHtml(st)}</span></td>
             <td class="num">${sp.total}</td>
-            <td class="num" style="color:#6ee7b7">${sp.issued}</td>
-            <td class="num" style="color:#fda4af">${sp.outstanding}</td>
+            <td class="num" style="color:#dc2626; font-weight:600">${sp.outstanding}</td>
             <td class="center">${renderPctBadge(sp.total, sp.issued, sp.outstanding)}</td>
             <td class="center">${daysDisplayHtml}</td>
             <td class="center"><span class="status-pill ${kpi3.badgeClass}">${escapeHtml(kpi3.status)}</span></td>
           </tr>
         `;
-        return isExpanded ? (mainRow + buildRemarksDrawerRow(r, 17, 'withps')) : mainRow;
+        return isExpanded ? (mainRow + buildRemarksDrawerRow(r, 16, 'withps')) : mainRow;
       }).join('');
 
       document.getElementById('withps-detail-table').innerHTML = `
         <colgroup>
-          <col style="width:2.6%">
-          <col style="width:6.0%">
-          <col style="width:6.0%">
-          <col style="width:4.5%">
-          <col style="width:12.4%">
-          <col style="width:8.0%">
-          <col style="width:5.7%">
-          <col style="width:5.7%">
-          <col style="width:4.0%">
-          <col style="width:8.4%">
-          <col style="width:8.2%">
-          <col style="width:3.6%">
-          <col style="width:3.8%">
-          <col style="width:5.0%">
-          <col style="width:4.5%">
+          <col style="width:2.7%">
           <col style="width:6.2%">
-          <col style="width:7.1%">
+          <col style="width:6.2%">
+          <col style="width:4.7%">
+          <col style="width:12.9%">
+          <col style="width:8.3%">
+          <col style="width:5.9%">
+          <col style="width:5.9%">
+          <col style="width:4.1%">
+          <col style="width:8.7%">
+          <col style="width:8.5%">
+          <col style="width:3.8%">
+          <col style="width:5.2%">
+          <col style="width:4.7%">
+          <col style="width:6.4%">
+          <col style="width:7.4%">
         </colgroup>
         <thead>
           <tr>
@@ -5909,20 +6175,19 @@
             <th rowspan="2" class="center">Quoted</th>
             <th rowspan="2" class="num">Quote Value<br>(RM)</th>
             <th rowspan="2" class="center">Progress<br>Status</th>
-            <th colspan="4" class="spare-header-th">Spare Status</th>
+            <th colspan="3" class="spare-header-th">Spare Status</th>
             <th colspan="2" class="kpi4-header-th">KPI 3 Monitoring</th>
           </tr>
           <tr>
             <th class="num">Total</th>
-            <th class="num">Issued</th>
-            <th class="num">Out-<br>standing</th>
+            <th class="num">O/S</th>
             <th class="center">%<br>Issued</th>
             <th class="center">Days /<br>Var.</th>
             <th class="center">Status</th>
           </tr>
         </thead>
         <tbody>
-          ${bodyHtml || `<tr><td colspan="17" class="center" style="padding:20px;color:#94a3b8">No matching records found.</td></tr>`}
+          ${bodyHtml || `<tr><td colspan="16" class="center" style="padding:20px;color:#94a3b8">No matching records found.</td></tr>`}
         </tbody>
         ${filtered.length ? `
         <tfoot>
@@ -5932,8 +6197,7 @@
             <td class="num">${formatRM(sumQuoteVal)}</td>
             <td></td>
             <td class="num">${sumTotal}</td>
-            <td class="num" style="color:#6ee7b7">${sumIssued}</td>
-            <td class="num" style="color:#fda4af">${sumOs}</td>
+            <td class="num" style="color:#dc2626; font-weight:600">${sumOs}</td>
             <td class="center">${renderPctBadge(sumTotal, sumIssued, sumOs)}</td>
             <td colspan="2"></td>
           </tr>
@@ -6014,7 +6278,7 @@
           <div class="kpi-sub">${pct(sumIssued, sumDemand)} fulfillment rate</div>
         </div>
         <div class="kpi-card" style="--kpi-accent:#f43f5e">
-          <div class="kpi-label">Total Outstanding (O/S)</div>
+          <div class="kpi-label">Total O/S</div>
           <div class="kpi-value">${sumOs}</div>
           <div class="kpi-sub">Open / On RFQ / On Order / PO Req</div>
         </div>
@@ -6079,7 +6343,7 @@
           <div class="bar-chart-row clickable-bar ${isSel ? 'selected-bar' : ''}" style="${isDim ? 'opacity:0.45' : ''}" onclick="toggleNoPsAssign('${escapeJs(g.assign)}')">
             <div class="bar-chart-top">
               <span><strong>${isSel ? '▶ ' : ''}${escapeHtml(g.assign)}</strong> — <strong>${g.qty}</strong> unit${g.qty > 1 ? 's' : ''}</span>
-              <span style="color:#94a3b8">${stBreakdown}</span>
+              <span style="color:#64748b">${stBreakdown}</span>
             </div>
             <div class="bar-track">
               <div class="bar-seg" style="width:${w}%; background:linear-gradient(90deg, #d97706, #f59e0b)"></div>
@@ -6137,12 +6401,11 @@
             <td>${escapeHtml(r['TDI COMPLETE'] || '-')}</td>
             <td><span class="status-pill ${statusClass(st)}">${escapeHtml(st)}</span></td>
             <td class="num">${sp.total}</td>
-            <td class="num" style="color:#6ee7b7">${sp.issued}</td>
-            <td class="num" style="color:#fda4af">${sp.outstanding}</td>
+            <td class="num" style="color:#dc2626; font-weight:600">${sp.outstanding}</td>
             <td class="center">${renderPctBadge(sp.total, sp.issued, sp.outstanding)}</td>
           </tr>
         `;
-        return isExpanded ? (mainRow + buildRemarksDrawerRow(r, 14, 'nops')) : mainRow;
+        return isExpanded ? (mainRow + buildRemarksDrawerRow(r, 13, 'nops')) : mainRow;
       }).join('');
 
       document.getElementById('nops-detail-table').innerHTML = `
@@ -6158,25 +6421,23 @@
             <th rowspan="2">Input Date</th>
             <th rowspan="2">TDI Complete</th>
             <th rowspan="2">Progress Status</th>
-            <th colspan="4" class="spare-header-th">Spare Status</th>
+            <th colspan="3" class="spare-header-th">Spare Status</th>
           </tr>
           <tr>
             <th class="num">Total</th>
-            <th class="num">Issued</th>
-            <th class="num">Outstanding</th>
+            <th class="num">O/S</th>
             <th class="center">% Issued</th>
           </tr>
         </thead>
         <tbody>
-          ${bodyHtml || `<tr><td colspan="14" class="center" style="padding:20px;color:#94a3b8">No matching records found.</td></tr>`}
+          ${bodyHtml || `<tr><td colspan="13" class="center" style="padding:20px;color:#94a3b8">No matching records found.</td></tr>`}
         </tbody>
         ${filtered.length ? `
         <tfoot>
           <tr>
             <td colspan="10">SUBTOTAL (${filtered.length} JCN)</td>
             <td class="num">${sumTotal}</td>
-            <td class="num" style="color:#6ee7b7">${sumIssued}</td>
-            <td class="num" style="color:#fda4af">${sumOs}</td>
+            <td class="num" style="color:#dc2626; font-weight:600">${sumOs}</td>
             <td class="center">${renderPctBadge(sumTotal, sumIssued, sumOs)}</td>
           </tr>
         </tfoot>` : ''}
