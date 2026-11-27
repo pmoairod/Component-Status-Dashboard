@@ -4465,6 +4465,8 @@
     // =========================================================================
     // 4B. GOOGLE DRIVE DIRECT LINK PROTOTYPE (BETA)
     // =========================================================================
+    const DEFAULT_EXEC_URL = 'https://script.google.com/macros/s/AKfycbwQ0tqpbQFpSO11zu-8IKVkUYtiLGCkP2cWh6o0cJcJap_3CfUytXLOCFljPg1sewiaXQ/exec';
+
     function initGDriveBeta() {
       try {
         const raw = localStorage.getItem(STORAGE_GDRIVE_KEY);
@@ -4474,6 +4476,16 @@
       } catch (e) {
         gdriveConfig = null;
       }
+
+      if (!gdriveConfig || !gdriveConfig.exportUrl) {
+        if (DEFAULT_EXEC_URL && DEFAULT_EXEC_URL.includes('script.google.com')) {
+          const parsedDefault = parseGDriveInput(DEFAULT_EXEC_URL, DEFAULT_TARGET_EXCEL_NAME);
+          if (parsedDefault) {
+            gdriveConfig = { ...parsedDefault, autoSync: true };
+          }
+        }
+      }
+
       updateGDriveBarUI();
       if (gdriveConfig && gdriveConfig.autoSync && gdriveConfig.exportUrl) {
         syncFromGoogleDrive(false);
